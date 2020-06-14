@@ -18,6 +18,12 @@ header {
     flex-wrap: wrap;
 }
 
+.align {
+    text-align: left;
+    justify-content: left;
+    vertical-align: initial;
+    
+}
 .name-box {
     border: none;
     background-color: lightblue;
@@ -54,19 +60,17 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li a {
+header nav ul li a , .contact {
     font-size: 2vw;
     font-weight: bold;
     color: lightblue;
     padding: 0 15px;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-bottom: lightblue solid 3px;
-    white-space: nowrap;
 }
   
-header a  nav ul li .underline {
-    border-bottom: solid lightblue 1px;
+.underline {
+    border-bottom: solid lightblue 3px;
 }
     
 section {
@@ -74,9 +78,9 @@ section {
 }
 
 .hero {
-    background-image: url("../Images/20180407_161911_IMG_0780.JPG");
+    background-image: url(../Images/20180407_161911_IMG_0780\ \(2\).png);
     background-size: cover;
-    height: fit-content;
+    height: 40em;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -89,31 +93,33 @@ section {
     display: flexbox;
     float: left;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     white-space: nowrap;
-    font-size: 50px;
-    padding-right: 40px;
-    text-align: left;
+    font-size: 38px;
+    padding-right: 20px;
+    text-align: right;
+    border-right: #242e61 solid 3px;
+    vertical-align: text-top;
 }
+
+
 
 .paragraph {
     display: flex;
     flex-wrap: wrap;
+    text-align: left;
     color:  #242e61;
-    border-left:  #242e61 solid 3px;
     padding-left: 50px;
+    width: 70%;
 }
 
 .pictures-box {
-    width: 80%;
+    width: 70%;
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: repeat(3, 2fr);
-    border: 2px solid #024e76;
+    padding-left: 50px;
     color: #024e76;
-    font-size: 1.2rem;
     height: 50em;   
     grid-row-gap: 15px;
     grid-column-gap: 25px;
@@ -121,7 +127,7 @@ section {
 
 .run-buddy {
     grid-column: 2/span 1;
-   background-image: url(/Images/Run-buddy-capture.PNG);
+   background-image: url(../Images/Run-buddy-capture.PNG);
    background-size: cover;
    grid-column: 2/span 1;
    grid-row: 3;
@@ -131,7 +137,7 @@ section {
 .surf {
     grid-column: 1/ 3;
     grid-row: 1/span 2;
-    background-image: url(/Images/surf.jpg);
+    background-image: url(../Images/jeremy-bishop-OXMX3R0KKx0-unsplash.jpg);
     background-size: cover;
 }
 
@@ -155,7 +161,7 @@ section {
 
   .pastel {
       position: relative;
-      background-image: url(/Images/pastel.jpg);
+      background-image: url(../Images/eberhard-grossgasteiger-S-2Ukb_VqpA-unsplash.jpg);
       background-size: cover;
       grid-row: 3;
       grid-column: 1/span 1;
@@ -173,13 +179,21 @@ section {
   .led {
       grid-column: 3/span 1;
       grid-row: 1/span 1;
-      background-image: url(/Images/ledwall.jpg);
+      background-image: url(../Images/justin-lane-lwwM_dotpcs-unsplash.jpg);
       background-size: cover;
   }
 
   .calculator {
-      background-image: url(/Images/calculator.jpg);
+      background-image: url(../Images/vishwarajsinh-rana-_1fByLYHA_0-unsplash.jpg);
       background-size: cover;
       grid-column: 3;
       grid-row: 2;
+  }
+
+  .contact {
+      color: #242e61;
+      display: initial;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: space-evenly;
   }
