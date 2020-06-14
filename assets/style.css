@@ -1,5 +1,5 @@
 *{margin: 0;
-    padding:0;
+    padding:0 0 0px 0;
     box-sizing: border-box;
     }
 
@@ -8,6 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     background-color:#e1edf7;
+    text-decoration: none;
 }
 
 header {
@@ -34,7 +35,7 @@ header {
 
 header h1 {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 35px;
     color: #242e61;
     text-indent:  2em;
 }
@@ -71,6 +72,7 @@ header nav ul li a , .contact {
   
 .underline {
     border-bottom: solid lightblue 3px;
+    margin-right: 30px;
 }
     
 section {
@@ -94,11 +96,13 @@ section {
     float: left;
     flex-wrap: wrap;
     white-space: nowrap;
-    font-size: 38px;
+    font-size: 30px;
     padding-right: 20px;
     text-align: right;
     border-right: #242e61 solid 3px;
-    vertical-align: text-top;
+    vertical-align:auto;
+    align-items: flex-start;
+    line-height: 70px;
 }
 
 
@@ -120,7 +124,7 @@ section {
     grid-template-rows: repeat(3, 2fr);
     padding-left: 50px;
     color: #024e76;
-    height: 50em;   
+    height: 45em;   
     grid-row-gap: 15px;
     grid-column-gap: 25px;
 }
@@ -191,9 +195,28 @@ section {
   }
 
   .contact {
-      color: #242e61;
-      display: initial;
-      flex-wrap: wrap;
-      text-align: center;
+     
+        display: initial;
+      padding-left: 100px;
       justify-content: space-evenly;
+      
+      
+  }
+
+  .contact a {
+    color: #242e61;
+    text-decoration-line: none;
+  }
+
+  .foot {
+    padding-bottom: 100px;
+    display:  flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .work a {
+      float: inline-start;
+
+      
   }
