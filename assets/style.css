@@ -136,7 +136,21 @@ section {
     grid-row-gap: 15px;
     grid-column-gap: 25px;
 }
+.picture-box {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    border:  none solid 1px;
+    background-color: lightblue;
+    padding-right: 10px;
+    flex-wrap: wrap;
+ }
+ .picture-text {
+    color:#242e61;
+    font-size: 16px;
+    font-weight: bold;
 
+  }
 .run-buddy {
    background-image: url(../Images/Run-buddy-capture.PNG);
    background-size: cover;
@@ -156,20 +170,7 @@ section {
     border: solid lightblue 3px;
 }
 
-.picture {
-    max-height: stretch;
-    max-width: 100%;
-    object-fit: cover;
-    border: lightblue solid 3px;
-    
-}
 
-.picture-text {
-    color:#242e61;
-    font-size: 16px;
-    font-weight: bold;
-
-  }
 
   .pastel {
       position: relative;
@@ -180,15 +181,8 @@ section {
       border: solid lightblue 3px;
   }
 
-  .picture-box {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    border:  none solid 1px;
-    background-color: lightblue;
-    padding-right: 10px;
-    flex-wrap: wrap;
-  }
+  
+ 
 
   .led {
       grid-column: 3/span 1;
