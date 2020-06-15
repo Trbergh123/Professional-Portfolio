@@ -20,9 +20,7 @@ header {
 }
 
 .align {
-    text-align: left;
-    justify-content: left;
-    vertical-align: initial;
+    text-align: right;
     
 }
 .name-box {
@@ -66,15 +64,18 @@ header nav ul li a , .contact {
     font-weight: bold;
     color: lightblue;
     padding: 0 15px;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
   
 .underline {
     border-bottom: solid lightblue 3px;
     margin-right: 30px;
 }
-    
+
+.underline2 {
+    border-bottom: solid #242e61 3px;
+    margin-right: 30px;
+    margin-left: 80px;
+}
 section {
     padding: 60px;
 }
@@ -87,23 +88,30 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-end;
+    position: relative;
+    text-align: right;
 }
 
+.hero-subtitle {
+    background-color: lightblue;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 2em;
+    color: #242e61;
+
+}
 .titles {
     color:  #242e61;
-    display: flexbox;
-    float: left;
-    flex-wrap: wrap;
-    white-space: nowrap;
+    width: 200px;
     font-size: 30px;
-    padding-right: 20px;
     text-align: right;
     border-right: #242e61 solid 3px;
-    vertical-align:auto;
-    align-items: flex-start;
     line-height: 70px;
+    padding-right: 30px;
 }
+  
 
 
 
@@ -130,37 +138,37 @@ section {
 }
 
 .run-buddy {
-    grid-column: 2/span 1;
    background-image: url(../Images/Run-buddy-capture.PNG);
    background-size: cover;
    grid-column: 2/span 1;
    grid-row: 3;
+   position: relative;
+   border: solid lightblue 3px;
     
     }
 
 .surf {
+    position: relative;
     grid-column: 1/ 3;
     grid-row: 1/span 2;
     background-image: url(../Images/jeremy-bishop-OXMX3R0KKx0-unsplash.jpg);
     background-size: cover;
+    border: solid lightblue 3px;
 }
 
 .picture {
     max-height: stretch;
     max-width: 100%;
     object-fit: cover;
-    border: lightblue solid 2px;
+    border: lightblue solid 3px;
     
 }
 
 .picture-text {
-    z-index: 0;
-    position: absolute;
     color:#242e61;
     font-size: 16px;
     font-weight: bold;
-    display: grid;
-    
+
   }
 
   .pastel {
@@ -169,15 +177,17 @@ section {
       background-size: cover;
       grid-row: 3;
       grid-column: 1/span 1;
+      border: solid lightblue 3px;
   }
 
   .picture-box {
-    position: relative;
-    top: 170px;
+    position: absolute;
+    top: 100px;
     left: 0;
     border:  none solid 1px;
     background-color: lightblue;
     padding-right: 10px;
+    flex-wrap: wrap;
   }
 
   .led {
@@ -185,20 +195,23 @@ section {
       grid-row: 1/span 1;
       background-image: url(../Images/justin-lane-lwwM_dotpcs-unsplash.jpg);
       background-size: cover;
+      position: relative;
+      border: solid lightblue 3px;
   }
 
   .calculator {
       background-image: url(../Images/vishwarajsinh-rana-_1fByLYHA_0-unsplash.jpg);
       background-size: cover;
+      position: relative;
       grid-column: 3;
       grid-row: 2;
+      border: solid lightblue 3px;
   }
 
   .contact {
      
-        display: initial;
-      padding-left: 100px;
-      justify-content: space-evenly;
+    display: initial;
+    justify-content: space-evenly;
       
       
   }
@@ -206,17 +219,120 @@ section {
   .contact a {
     color: #242e61;
     text-decoration-line: none;
+    
   }
 
-  .foot {
-    padding-bottom: 100px;
-    display:  flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  footer {
+    padding: 60px;
+  }
+
+  footer a {
+      margin-top: 30px;
   }
 
   .work a {
       float: inline-start;
-
-      
   }
+
+  .row {
+      display: flex;
+      flex-wrap: nowrap;
+  }
+
+  /* Media query for smaller desktop screens and smaller */
+  /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    header h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 4em;
+        text-indent: 0;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+    
+    .pictures-box {
+        font-size: .5em;
+    }
+    
+    .picture-box {
+        top: 10px;
+    }
+
+    .picture-text {
+        font-size: 1em;
+        top: 0px;
+    }
+
+    body {
+        width: 100%;
+    }
+    
+    footer {
+        width: 100%;
+        line-height: 1.5;
+        justify-content: space-evenly;
+        text-align:center;
+    }
+    
+}
+
+/*MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width:768px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    
+}
+
+/*MEDIA QUERY FOR MOBILE PHONES AND SMALLER*/
+@media screen and (max-width: 575px) {
+    header {
+        width: 100%;
+        line-height: 1.5;
+    }
+    .name-box {
+        width: 100%;
+    }
+    body {
+        width: 100%;
+    }
+    .picture-text {
+        font-size: .5em;
+    }
+    .pictures-box {
+    width: 100%;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    }
+
+    .picture-box {
+        width: 80%;
+        overflow: inherit;
+    }
+
+    footer {
+        width: 100%;
+        font: 3px;
+        justify-content: center;
+    }
+
+    .titles h2 {
+        font-size: .7em;
+    }
+}
